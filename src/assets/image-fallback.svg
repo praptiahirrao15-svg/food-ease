@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b101d" />
+      <stop offset="100%" stop-color="#17243f" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7cfc00" />
+      <stop offset="100%" stop-color="#72d400" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" />
+  <circle cx="400" cy="260" r="180" fill="rgba(255,255,255,0.06)" />
+  <path d="M340 420c0-55 45-100 100-100s100 45 100 100H340Z" fill="url(#accent)" opacity="0.2" />
+  <rect x="250" y="220" width="300" height="160" rx="40" fill="rgba(255,255,255,0.1)" />
+  <path d="M330 260c0-33 27-60 60-60s60 27 60 60v30H330v-30Z" fill="#f7f7fb" opacity="0.16" />
+  <path d="M330 350c0-25 20-45 45-45h150c25 0 45 20 45 45v45H330v-45Z" fill="#f7f7fb" opacity="0.16" />
+  <text x="400" y="520" text-anchor="middle" fill="#dbe2ff" font-family="Inter, sans-serif" font-size="42" font-weight="700">FoodEase</text>
+  <text x="400" y="565" text-anchor="middle" fill="#99aaff" font-family="Inter, sans-serif" font-size="24">Image not available</text>
+</svg>

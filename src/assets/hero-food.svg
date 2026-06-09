@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b101d" />
+      <stop offset="100%" stop-color="#162a48" />
+    </linearGradient>
+    <linearGradient id="fill" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7cfc00" />
+      <stop offset="100%" stop-color="#9bf56d" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" rx="50" fill="url(#bg)" />
+  <path d="M150 180c0-60 40-100 90-100h420c50 0 90 40 90 100v240c0 60-40 100-90 100H240c-50 0-90-40-90-100V180Z" fill="#11213a" />
+  <path d="M220 250c0-40 32-72 72-72h296c40 0 72 32 72 72v118c0 40-32 72-72 72H292c-40 0-72-32-72-72V250Z" fill="url(#fill)" opacity="0.96" />
+  <circle cx="310" cy="320" r="38" fill="#ffffff" opacity="0.22" />
+  <circle cx="475" cy="280" r="18" fill="#ffffff" opacity="0.22" />
+  <circle cx="575" cy="360" r="24" fill="#ffffff" opacity="0.22" />
+  <path d="M340 300c20-45 80-45 100 0s-20 90-50 90-70-45-50-90Z" fill="#ffefd4" />
+  <path d="M430 320c0 10-18 20-25 20s-25-10-25-20 18-20 25-20 25 10 25 20Z" fill="#c05b2d" />
+  <path d="M365 300c10-20 30-20 40 0" stroke="#b45c24" stroke-width="14" stroke-linecap="round" fill="none" />
+  <path d="M330 360c20-12 60-12 80 0" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.7" />
+  <path d="M240 190c18-18 48-18 64 0" stroke="#b4ffc8" stroke-width="14" stroke-linecap="round" fill="none" />
+  <path d="M280 460h320" stroke="#7cfc00" stroke-width="22" stroke-linecap="round" opacity="0.8" />
+  <text x="227" y="520" fill="#f7f7fb" font-family="Inter, sans-serif" font-size="42" font-weight="700">Delicious Meals</text>
+  <text x="227" y="560" fill="#b0b7c6" font-family="Inter, sans-serif" font-size="22">Freshly prepared, always on time.</text>
+</svg>
