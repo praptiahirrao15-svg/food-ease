@@ -1,5 +1,5 @@
 ![HOME PAGE](https://github.com/praptiahirrao15-svg/food-ease/blob/main/HOME%20PG.png?raw=true)
 ![MENU PAGE](https://github.com/praptiahirrao15-svg/food-ease/blob/main/MENU%20PG.png?raw=true)
-![ABOUT PAGE]()
+![ABOUT PAGE](https://github.com/praptiahirrao15-svg/food-ease/blob/main/ABOUT%20PG.png?raw=true)
 ![CONTACT PAGE]()
 ![ORDER PAGE]()
