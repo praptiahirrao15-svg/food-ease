@@ -1,4 +1,4 @@
-![HOME PAGE]()
+![HOME PAGE](https://github.com/praptiahirrao15-svg/food-ease/blob/main/HOME%20PG.png?raw=true)
 ![MENU PAGE]()
 ![ABOUT PAGE]()
 ![CONTACT PAGE]()
