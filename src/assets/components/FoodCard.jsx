@@ -37,12 +37,12 @@ export function FoodCard({ food, quantity = 0, onAdd, onRemove }) {
               −
             </button>
             <span>{quantity}</span>
-            <button type="button" onClick={() => onAdd(food.id)}>
+            <button type="button" onClick={() => onAdd(food)}>
               +
             </button>
           </div>
         ) : (
-          <button type="button" className="add-button" onClick={() => onAdd(food.id)}>
+          <button type="button" className="add-button" onClick={() => onAdd(food)}>
             Add To Cart
           </button>
         )}

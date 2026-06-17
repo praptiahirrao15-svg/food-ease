@@ -1,7 +1,9 @@
 ﻿import { FoodCard } from "../assets/components/FoodCard";
 import { Footer } from "../assets/components/Footer";
+import "../cart.css";
 
 export default function Products({ cartItems, onAddItem, onRemoveItem }) {
+  const cartList = Object.values(cartItems || {});
   const allFoods = [
     {
       id: "chicken-biryani",
@@ -133,13 +135,65 @@ export default function Products({ cartItems, onAddItem, onRemoveItem }) {
               <FoodCard
                 key={food.id}
                 food={food}
-                quantity={cartItems[food.id] || 0}
+                quantity={cartItems[food.id]?.quantity || 0}
                 onAdd={onAddItem}
                 onRemove={onRemoveItem}
               />
             ))}
           </div>
         </div>
+
+        <section className="cart-table-wrapper">
+          <h2 style={{ margin: "2rem 0 1rem", color: "var(--text)" }}>Current cart</h2>
+          {cartList.length === 0 ? (
+            <div className="cart-empty">
+              <h2>Your cart is empty</h2>
+              <p>Add items from the menu to see them here.</p>
+            </div>
+          ) : (
+            <table className="cart-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartList.map(({ product, quantity }) => {
+                  const unitPrice = Number(product.price.replace(/[^0-9.]/g, ""));
+                  return (
+                    <tr key={product.id} className="cart-row">
+                      <td>
+                        <div className="cart-product">
+                          <img src={product.img} alt={product.name} />
+                          <div className="cart-product-info">
+                            <h3>{product.name}</h3>
+                            <p>{product.price}</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="cart-price">₹{unitPrice.toFixed(2)}</td>
+                      <td>
+                        <div className="quantity-control">
+                          <button type="button" onClick={() => onRemoveItem(product.id)}>
+                            −
+                          </button>
+                          <span>{quantity}</span>
+                          <button type="button" onClick={() => onAddItem(product)}>
+                            +
+                          </button>
+                        </div>
+                      </td>
+                      <td className="cart-total">₹{(unitPrice * quantity).toFixed(2)}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          )}
+        </section>
       </div>
 
       <Footer />

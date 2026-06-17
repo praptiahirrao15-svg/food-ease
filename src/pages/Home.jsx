@@ -227,7 +227,7 @@ export default function Home({ cartItems, onAddItem, onRemoveItem }) {
               <FoodCard
                 key={food.id}
                 food={food}
-                quantity={cartItems[food.id] || 0}
+                quantity={cartItems[food.id]?.quantity || 0}
                 onAdd={onAddItem}
                 onRemove={onRemoveItem}
               />

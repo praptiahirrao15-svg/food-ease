@@ -60,33 +60,36 @@ button {
   position: sticky;
   top: 0;
   z-index: 120;
-  padding: 1rem 0;
-  background: rgba(8, 10, 18, 0.72);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  padding: 1rem 0.75rem;
+  background: rgba(8, 10, 18, 0.75);
+  border: 1px solid rgba(124, 252, 0, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 24px 60px rgba(0, 0, 0, 0.18);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(8, 10, 18, 0.95);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
+  background: rgba(8, 10, 18, 0.92);
+  border-color: rgba(124, 252, 0, 0.18);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.24);
 }
 
 .navbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
 .logo span {
@@ -95,18 +98,24 @@ button {
 
 .nav-search {
   position: relative;
-  flex: 1 1 340px;
-  max-width: 420px;
+  flex: 1 1 380px;
+  max-width: 460px;
 }
 
 .search {
   width: 100%;
-  padding: 0.95rem 1rem;
+  padding: 1rem 1.1rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.search:focus {
+  border-color: rgba(124, 252, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .search::placeholder {
@@ -140,7 +149,7 @@ button {
 .search-tags button {
   border: none;
   border-radius: 999px;
-  background: rgba(124, 252, 0, 0.12);
+  background: rgba(124, 252, 0, 0.16);
   color: var(--accent);
   padding: 0.7rem 1rem;
   font-size: 0.9rem;
@@ -149,25 +158,28 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   white-space: nowrap;
 }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.82);
-  transition: color 0.25s ease, transform 0.25s ease;
+  padding: 0.75rem 0.95rem;
+  border-radius: 999px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--accent);
+  background: rgba(124, 252, 0, 0.12);
   transform: translateY(-1px);
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .cta-button {
@@ -176,28 +188,37 @@ button {
   justify-content: center;
   padding: 0.95rem 1.4rem;
   border-radius: 999px;
-  border: 1px solid rgba(124, 252, 0, 0.24);
-  background: linear-gradient(135deg, rgba(124, 252, 0, 0.12), rgba(255, 255, 255, 0.04));
-  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
   font-weight: 700;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 60px rgba(124, 252, 0, 0.18);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(124, 252, 0, 0.22);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.22);
 }
 
 .nav-cart {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.95rem 1.05rem;
+  gap: 0.55rem;
+  padding: 0.92rem 1.1rem;
   border-radius: 999px;
-  border: 1px solid rgba(124, 252, 0, 0.24);
-  background: rgba(124, 252, 0, 0.1);
+  border: 1px solid rgba(124, 252, 0, 0.28);
+  background: rgba(124, 252, 0, 0.12);
   color: var(--accent);
   font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-cart:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 40px rgba(124, 252, 0, 0.18);
 }
 
 .hero {

@@ -70,7 +70,7 @@ export function Navbar({ cartCount }) {
           <Link to="/products" className="cta-button">
             Order Now
           </Link>
-          <button type="button" className="nav-cart" onClick={() => navigate("/products")}> 
+          <button type="button" className="nav-cart" onClick={() => navigate("/cart")}> 
             <span>🛒</span>
             <span>{cartCount}</span>
           </button>
